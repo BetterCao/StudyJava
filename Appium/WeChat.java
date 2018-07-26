@@ -29,9 +29,11 @@ public class WeChat {
         AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 
         //开始执行操作
-        driver.findElement(By.linkText("刘伯彦")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//android.view.View[@text='刘伯彦']")).click();
         Thread.sleep(2000);
         System.out.println("结束！");
+        driver.quit();
 
 	}
 
